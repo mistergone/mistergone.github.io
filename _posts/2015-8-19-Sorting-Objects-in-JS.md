@@ -10,15 +10,15 @@ The problem is... there are no associative arrays in JavaScript. In other langua
 
 But all the same, we can write one!
 
-# Why Do We Need to Sort an Object?
+## Why Do We Need to Sort an Object?
 Well, let's say we want to sort a table by a column. This is a common enough use case, and it's the perfect place for sorting an object.
 
 __[Here's a fiddle!](http://jsfiddle.net/mistergone/dn6nz9u3/)__
 
-# How Does It Work?
+## How Does It Work?
 The first thing we do is handle the click event - we find the table, the row, the cell, and the index of the cell (which column was clicked), and we store all that. Then we find the value in that column in each row of the table, and as we do so, we fill an array, called `rows`. This array is __an array of arrays__. So, each value in `rows` is two arrays - the first is the value we got from the table cell, and the second is a jQuery object of the entire row (which will come in handy later).
 
-# The Meaty Sort Function
+## The Meaty Sort Function
 The array of arrays, by itself, does not make sorting any easier - remember, each value in that array still has an integer key, and they have nothing to do with the values from the cells. But there's a neat thing about the JavaScript `Array.sort()` method - it can accept a function as a parameter, and that function call tell `Array.sort()` how to sort the Array.
 
 Unfortunately, most of the solutions online don't seem to tell you about how to pass that function to `Array.sort()`.
