@@ -52,6 +52,7 @@ someArray.sort( function(a, b) {
 ```
 
 Of course, you can get a lot more complicated. If, for some reason, the number 5 should always be first, but otherwise the Array should be sorted numerically, this should work:
+
 ```
 someArray.sort( function(a, b) {
   if ( a === 5 ) return -1;
@@ -59,6 +60,7 @@ someArray.sort( function(a, b) {
   return a - b;
 })
 ```
+
 That looks silly, but it provides some insight into how the function works.
 
 By knowing the ins and outs of `Array.sort( sortingFunction )`, you can sort complex objects by multiple dimensions (say, by last name, then first name) with more complex functions.
