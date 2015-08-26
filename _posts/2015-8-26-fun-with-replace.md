@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fun with String.replace()
+date: 2015-08-26 08:00:00
 ---
 
 It's time again for another fun exploration of the depths of Javascript. Did you know you could pass a function to the `String.replace()` method? It can make some complex [regex](https://en.wikipedia.org/wiki/Regular_expression) situations much easier.
