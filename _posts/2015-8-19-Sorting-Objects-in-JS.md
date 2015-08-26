@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sorting Objects in JS
+date: 2015-08-19 21:00:00
 ---
 
 By way of showing what I intend to do here, let's talking about sorting associative arrays in JavaScript!
