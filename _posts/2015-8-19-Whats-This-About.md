@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What's This About?
+date: 2015-08-19 20:00:00
 ---
 
 __TL;DR__ - I made a github blog out of Jeykll ([using this guide](http://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)) to talk about things related to web development. Mostly, I tend to find that things on the internet aren't explained to my liking, so this blog is for my explanations or experiences, which may or may not help others.
