@@ -9,7 +9,7 @@ It's time again for another fun exploration of the depths of Javascript. Did you
 ## The Setup
 In my case, the setup was attempting to make a string into a number. `parseInt()` does this, but with complications. Try this in your local JS console:
 ```
-> parseInt('99,999');
+-> parseInt('99,999');
 
 99
 ```
@@ -26,15 +26,15 @@ Simple, right? This will fix all our problems. Well, I hinted above at one poten
 
 Once again, let's try this in our JS console:
 ```
-> numberString = '5.5.5';
-> numberString = numberString.replace( /[^0-9\.]+/g, '' );
+-> numberString = '5.5.5';
+-> numberString = numberString.replace( /[^0-9\.]+/g, '' );
 
 "5.5.5"
 ```
 Oh. That's not going to work. There are two decimal points in that string, which means when we try to turn it into a Number...
 
 ```
-> Number('5.5.5');
+-> Number('5.5.5');
 
 NaN
 ```
@@ -46,21 +46,21 @@ Instead, let's check out passing a function to `String.replace()`.
 
 This is how a simple `String.replace()` looks:
 ```
-> 'I hate dogs.'.replace( 'hate', 'love');
+-> 'I hate dogs.'.replace( 'hate', 'love');
 
 "I love dogs."
 ```
 
 Instead, we can use a regular expression as the first parameter to match:
 ```
->'I hate dogs.'.replace( /hate/g, 'love');
+->'I hate dogs.'.replace( /hate/g, 'love');
 
 "I love dogs."
 ```
 
 But we can also pass a function as the second parameter, which we can use to perform tests against the match and return whatever we want to replace the match with. That takes this form:
 ```
-> 'a,b,c,d,e'.replace( /[a-z]/g, function( match, offset, full ) { 
+-> 'a,b,c,d,e'.replace( /[a-z]/g, function( match, offset, full ) { 
       return '(The letter ' + match + ' was found at position ' + offset + '.)\n'; 
     });
 
